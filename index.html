@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador - Oracle Next Education</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="seccionIngresar">
+        <header>
+          <img src="img/logo.png" alt="" />
+        </header>
+        <div class="contenedorCampo">
+          <form action="">
+            <textarea
+              class="campoIngresar"
+              id="campoIngresar"
+              placeholder="Ingrese el texto aqui"
+              name="campoIngresar"
+              autofocus="true"
+              required="true"
+            ></textarea>
+
+            <p>Solo Ingrese minusculas y sin acentos</p>
+
+            <div>
+              <input
+                class="BotonAzul"
+                type="submit"
+                onclick="encriptador('encriptar')"
+                value="Encriptar"
+              />
+              <br />
+              <input
+                class="Boton"
+                type="submit"
+                onclick="encriptador('desencriptar')"
+                value="Desencriptar"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="seccionResultado">
+        <article class="articuloResultado" id="articuloResultado">
+          <!-- <p id="campoResultado"></p> -->
+          <textarea
+            name="campoResultado"
+            id="campoResultado"
+            disabled="true"
+          ></textarea>
+          <button class="Boton" onclick="copiarPortapapeles()">Copiar</button>
+        </article>
+
+        <article class="articuloSinResultado" id="articuloSinResultado">
+          <img src="img/munieco.png" alt="Ningun texto fue encontrado" />
+
+          <p class="textoNegrita">Ningun mensaje fue encontrado</p>
+
+          <p>Ingresa el texto que desea encriptar.</p>
+        </article>
+      </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
